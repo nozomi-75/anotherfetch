@@ -1,16 +1,10 @@
 # AnotherFetch
 
-AnotherFetch is yet another fetch script, which focuses on simplicity and minimalism. It aims to be a noob-friendly, drop-in replacement for Neofetch and screenFetch. With around 30 lines of code, it aims to display system information in a neat and legible manner.
+AnotherFetch is yet another fetch script, which focuses on simplicity and minimalism. It aims to be a noob-friendly, drop-in replacement for Neofetch and screenFetch. With around 30 lines of code, it aims to display system information in a neat and legible manner. 
+
+Special thanks to argwyll, imdakila, atrval, alitaj786, and shige!
 
 ![screenshot](anotherfetch.png)
-
-## Credits
-
-- argwyll
-- imdakila
-- atrval
-- alitaj786
-- shige
 
 ## Instructions
 
