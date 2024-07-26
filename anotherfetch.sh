@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Colors
-blue='\e[1m\e[38;5;125m'
+red='\e[1m\e[38;5;125m'
 reset='\e[0m\e[38;5;102m'
 
 # Gather system information
@@ -15,11 +15,11 @@ memory=$(free -h --si | awk '/Mem:/ {print $3 "/" $2}')
 disk=$(df -h / | awk '/\// {print $3 "/" $2 " (" $5 " used)"}')
 
 # Display information
-echo -e "${blue}OS: ${reset}$os"
-echo -e "${blue}CPU: ${reset}$cpu"
-echo -e "${blue}Uptime: ${reset}$uptime"
-echo -e "${blue}Kernel: ${reset}$kernel"
-echo -e "${blue}Desktop: ${reset}$de"
-echo -e "${blue}Packages: ${reset}$packages"
-echo -e "${blue}Memory: ${reset}$memory"
-echo -e "${blue}Disk: ${reset}$disk"
+echo -e "${red}OS: ${reset}$os"
+echo -e "${red}CPU: ${reset}$cpu"
+echo -e "${red}Uptime: ${reset}$uptime"
+echo -e "${red}Kernel: ${reset}$kernel"
+echo -e "${red}Desktop: ${reset}$de"
+echo -e "${red}Packages: ${reset}$packages"
+echo -e "${red}Memory: ${reset}$memory"
+echo -e "${red}Disk: ${reset}$disk"
