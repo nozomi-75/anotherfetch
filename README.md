@@ -4,6 +4,14 @@ AnotherFetch is yet another fetch script, which focuses on simplicity and minima
 
 ![screenshot](anotherfetch.png)
 
+## Credits
+
+- argwyll
+- imdakila
+- atrval
+- alitaj786
+- shige
+
 ## Instructions
 
 It can be used by simply appending the contents of the `anotherfetch.sh` to your `.bashrc`. It can also replace it entirely, but may remove certain terminal features.
