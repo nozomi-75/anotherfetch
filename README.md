@@ -8,13 +8,9 @@ Special thanks to argwyll, imdakila, atrval, alitaj786, and shige!
 
 ## Instructions
 
-Install:
+It can be used by simply appending the contents of the `anotherfetch.sh` to your `.bashrc`. It can also replace it entirely, but may remove certain terminal features. **That said, it is suggested to install the script instead.** To do so, open a terminal in the file directory and run `sudo make install`. 
 
-`make install`
-
-Uninstall:
-
-`make uninstall`
+You can run AnotherFetch by simply running `anotherfetch` in the terminal. The script can be removed by opening a terminal in the same directory as the makefile and run `sudo make uninstall`.
 
 ---
 
@@ -74,6 +70,29 @@ echo -e "${red}Disk: ${reset}$disk"
 `echo` is a command in Unix-like operating systems that outputs its argument(s) to the standard output, usually the terminal screen. When combined with a `-e` modifier, it enables the interpretation of backslash escapes. Here, it's used to allow the interpretation of ANSI escape codes earlier to set color variables to the text.
 
 `${red}` and `${reset}` applies the earlier color variables to the texts suceeding them. On the other hand, the methods like `$os` calls the variables defined in the second code section.
+
+---
+
+## What does the Makefile do?
+
+The contents of the Makefile in the releases are as follows;
+
+```
+PREFIX = /usr/bin
+
+all:
+	@echo Run \'make install\' to install Anotherfetch .
+
+install:
+	@mkdir -p $(PREFIX)
+	@cp -p anotherfetch.sh  $(PREFIX)/anotherfetch 
+	@chmod 755 $(PREFIX)/anotherfetch 
+
+uninstall:
+	@rm -rf $(PREFIX)/anotherfetch
+```
+
+Initially, it specifies a variable `PREFIX` with a value of `/usr/bin`. When `sudo make install` is executed, it will create `/usr/bin` if it doesn't exist. It will copy the `anotherfetch.sh` script to `/usr/bin/anotherfetch`. Then the permissions of the said directory is then set to 755, enabling the user to have read, write, and execute permissions, thus not requiring `sudo`. When you run `sudo make uninstall`, it will remove the `/usr/bin/anotherfetch` directory.
 
 ---
 
