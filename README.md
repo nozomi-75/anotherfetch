@@ -8,11 +8,13 @@ Special thanks to argwyll, imdakila, atrval, alitaj786, and shige!
 
 ## Instructions
 
-It can be used by simply appending the contents of the `anotherfetch.sh` to your `.bashrc`. It can also replace it entirely, but may remove certain terminal features.
+Install:
 
-```
-nano .bashrc
-```
+`make install`
+
+Uninstall:
+
+`make uninstall`
 
 ---
 
