@@ -11,7 +11,7 @@ de=$(echo $XDG_CURRENT_DESKTOP)
 uptime=$(uptime -p)
 packages=$(dpkg -l | grep -c '^ii')
 cpu=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2 | xargs)
-memory=$(free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }')
+memory=$(free -m | awk 'NR==2{printf "%s/%sMiB (%.2f%%)\n", $3,$2,$3*100/$2 }')
 disk=$(df -h / | awk '/\// {print $3 "/" $2 " (" $5 " used)"}')
 
 # Check for Flatpak and count installed applications
